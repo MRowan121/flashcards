@@ -6,6 +6,10 @@ class Turn {
 
     returnGuess() {
         return this.userGuess;
+    };
+
+    returnCard() {
+        return this.currentCard;
     }
 };
 
