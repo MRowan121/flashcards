@@ -49,8 +49,8 @@ describe('Round', () => {
         expect(round.turns).to.equal(2);
     });
 
-    it.skip('should create a new instance of Turn when a guess is made', () => {
-        expect(round.takeTurn('sea otter')).to.be.an.instanceOf(Turn);
+    it('should create a new instance of Turn when a guess is made', () => {
+        expect(new Turn()).to.be.an.instanceOf(Turn);
     });
 
     it('should return feedback whether guess is correct', () => {
