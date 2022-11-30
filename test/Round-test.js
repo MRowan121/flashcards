@@ -18,31 +18,31 @@ describe('Round', () => {
         round = new Round(deck);
     });
 
-    it.skip('should be a function', () => {
+    it('should be a function', () => {
         expect(Round).to.be.a('function');
     });
 
-    it.skip('should have a deck property', () => {
+    it('should have a deck property', () => {
         expect(round.deck).to.include(deck);
     });
 
-    it.skip('should have a return current card method', () => {
+    it('should have a return current card method', () => {
         expect(round.returnCurrentCard()).to.equal(card1);
     });
 
-    it.skip('should have a turn count property with default value of 0', () => {
+    it('should have a turn count property with default value of 0', () => {
         expect(round.turns).to.equal(0);
     });
 
-    it.skip('should have an incorrect guesses property with value of an empty array', () => {
+    it('should have an incorrect guesses property with value of an empty array', () => {
         expect(round.incorrectGuesses).to.deep.equal([]);
     });
 
-    it.skip('should have an correct guesses property with value of an empty array', () => {
+    it('should have an correct guesses property with value of an empty array', () => {
         expect(round.correctGuesses).to.deep.equal([]);
     });
 
-    it.skip('should be able to update the turn count', () => {
+    it('should be able to update the turn count', () => {
         round.takeTurn('sea otter');
         expect(round.turns).to.equal(1);
         round.takeTurn('sea otter');
@@ -53,34 +53,34 @@ describe('Round', () => {
         expect(round.takeTurn('sea otter')).to.be.an.instanceOf(Turn);
     });
 
-    it.skip('should return feedback whether guess is correct', () => {
+    it('should return feedback whether guess is correct', () => {
         expect(round.takeTurn('sea otter')).to.equal('correct!');
     });
 
-    it.skip('should return feedback whether guess is incorrect', () => {
+    it('should return feedback whether guess is incorrect', () => {
         expect(round.takeTurn('sea plotter')).to.equal('incorrect!');
     });
 
-    it.skip('should update the current card to be the next card after each turn', () => {
+    it('should update the current card to be the next card after each turn', () => {
         round.takeTurn('sea otter');
         expect(round.returnCurrentCard()).to.equal(card2);
         round.takeTurn('sea otter');
         expect(round.returnCurrentCard()).to.equal(card3);
     });
 
-    it.skip('should add card id for missed questions to the incorrect questions array', () => {
+    it('should add card id for missed questions to the incorrect questions array', () => {
         round.takeTurn('sea otter');
-        round.takeTurn('sea otter');
+        round.takeTurn('sea plotter');
         expect(round.incorrectGuesses[0]).to.equal(14);
     });
 
-    it.skip('should add card id for correct questions to the correct questions array', () => {
+    it('should add card id for correct questions to the correct questions array', () => {
         round.takeTurn('sea otter');
         round.takeTurn('sea otter');
-        expect(round.incorrectGuesses[0]).to.equal(1);
+        expect(round.correctGuesses[0]).to.equal(1);
     });
 
-    it.skip('should be able to calculate percent correct', () => {
+    it('should be able to calculate percent correct', () => {
         round.takeTurn('sea otter');
         round.takeTurn('sea otter');
         round.takeTurn('sea otter');
@@ -88,7 +88,7 @@ describe('Round', () => {
         expect(round.percentCorrect).to.equal(33);
     });
 
-    it.skip('should show user when round is over and what % they scored', () => {
+    it('should show user when round is over and what % they scored', () => {
         round.takeTurn('sea otter');
         round.takeTurn('sea otter');
         round.takeTurn('sea otter');
