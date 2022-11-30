@@ -24,6 +24,12 @@ class Round {
             return turn.giveFeedback();
         };
     };
+
+    calculatePercentCorrect() {
+        let score = (((this.correctGuesses.length / this.deck.allCards.length) * 100).toFixed(0));
+        this.percentCorrect = parseInt(score);
+        return `**Round over!** You answered ${this.percentCorrect}% of the questions correctly!`;
+    };
 };
 
 module.exports = Round;
