@@ -19,6 +19,7 @@ class Game {
     let deck = new Deck(cards);
     let round = new Round(deck);
     this.currentRound = round;
+    console.time('Elapsed Time')
     this.printMessage(deck, round);
   };
 
