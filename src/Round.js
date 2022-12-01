@@ -33,6 +33,7 @@ class Round {
 
     endRound() {
         if(this.turns === this.deck.allCards.length) {
+            console.log(this.calculatePercentCorrect());
             return this.calculatePercentCorrect();
         };
     };
