@@ -4,6 +4,8 @@
 For this project, I wrote a program to simulate a set of flash cards through the command line! A user will be able to see the questions, take guesses, and see a final score at the end of the round.
 
 ## Preview of App:
+![flashcardgif](https://user-images.githubusercontent.com/110955503/205177042-74e8d316-50df-49c0-b949-d9bb22ead15f.gif)
+
 
 ## Technology Used:
 For this project, I created a class file for Card, Turn, Deck, Round, & Game as well as a test file for each of those classes. This project was done entirely in JavaScript and utilizes Test Driven Development (TDD). 
