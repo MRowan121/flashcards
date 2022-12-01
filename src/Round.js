@@ -30,6 +30,12 @@ class Round {
         this.percentCorrect = parseInt(score);
         return `**Round over!** You answered ${this.percentCorrect}% of the questions correctly!`;
     };
+
+    endRound() {
+        if(this.turns === this.deck.allCards.length) {
+            return this.calculatePercentCorrect();
+        };
+    };
 };
 
 module.exports = Round;

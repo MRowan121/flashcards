@@ -92,6 +92,6 @@ describe('Round', () => {
         round.takeTurn('sea otter');
         round.takeTurn('sea otter');
         round.takeTurn('sea otter');
-        expect(round.calculatePercentCorrect()).to.equal('**Round over!** You answered 33% of the questions correctly!');
+        expect(round.endRound()).to.equal('**Round over!** You answered 33% of the questions correctly!')
     });
 });
