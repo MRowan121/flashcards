@@ -34,6 +34,7 @@ class Round {
     endRound() {
         if(this.turns === this.deck.allCards.length) {
             console.log(this.calculatePercentCorrect());
+            console.timeEnd('Elapsed Time');
             return this.calculatePercentCorrect();
         };
     };
